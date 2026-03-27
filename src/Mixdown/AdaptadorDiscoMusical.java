@@ -20,7 +20,17 @@ public class AdaptadorDiscoMusical implements Producto{
         this.discoMusical.getPrecio(); 
     }
 
-    public 
+    public int getDuracion(){
+        this.discoMusical.getDuracion();
+    }
+
+    public void mostrarDetalles(){
+        this.discoMusical.imprimirDatos();
+    }
+
+    public void mostrarInfoBasica(){
+        System.out.println(this.discoMusical.getNombre() + ":" + this.discoMusical.getPrecio());
+    }
 
 
 }
