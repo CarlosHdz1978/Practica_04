@@ -1,4 +1,4 @@
-package src.Mixdown;
+package Mixdown;
 
 public class DiscoMusical{
     private String nombre, artista, genero;
@@ -8,7 +8,7 @@ public class DiscoMusical{
     public DiscoMusical(String nombre, String artista, String genero, int estreno, double precio){
         this.nombre = nombre;
         this.artista = artista;
-        this.generoMusical = generoMusical;
+        this.genero = genero;
         this.estreno = estreno;
         this.precio = precio; 
     }

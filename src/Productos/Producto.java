@@ -1,4 +1,4 @@
-package src.Productos;
+package Productos;
 
 /**
  * Interfaz que define los métodos para un producto.
@@ -10,33 +10,33 @@ public interface Producto {
      * Obtiene el nombre del producto.
      * @return El nombre del producto.
      */
-    String getNombre();
+    public String getNombre();
 
     /**
      * Obtiene el género del producto.
      * @return El género del producto.
      */
-    String getGenero();
+    public String getGenero();
 
     /**
      * Obtiene el precio del producto.
      * @return El precio del producto.
      */
-    double getPrecio();
+    public double getPrecio();
 
     /**
      * Obtiene la duración del producto en minutos.
      * @return La duración del producto.
      */
-    int getDuracion();
+    public int getDuracion();
 
     /**
      * Muestra los detalles completos del producto.
      */
-    void mostrarDetalles();
+    public void mostrarDetalles();
 
     /**
      * Muestra la información básica del producto.
      */
-    void mostrarInfoBasica();
+    public void mostrarInfoBasica();
 }

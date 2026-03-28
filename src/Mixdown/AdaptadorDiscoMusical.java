@@ -1,4 +1,6 @@
-package src.Mixdown;
+package Mixdown;
+
+import Productos.*;
 
 public class AdaptadorDiscoMusical implements Producto{
 
@@ -9,28 +11,29 @@ public class AdaptadorDiscoMusical implements Producto{
     }
 
     public String getNombre(){
-        this.disco.getNombre();
+        return disco.getNombre();
     }
 
     public String getGenero(){
-        this.disco.getGenero(); 
+        return disco.getGenero(); 
     }
 
     public double getPrecio(){
-        this.disco.getPrecio(); 
+        return disco.getPrecio(); 
     }
 
     public int getDuracion(){
-        this.disco.getDuracion();
+        //La práctica no pide que los discos de Mixdown posean la propiedad de "duracion"
+        //solamente regresa 0 para cumplir con la interfaz Producto
+        return 0; 
     }
 
     public void mostrarDetalles(){
-        this.disco.mostrarInfoDisco();
+        disco.mostrarInfoDisco();
     }
 
     public void mostrarInfoBasica(){
-        System.out.println(this.disco.getNombre() + ":" + this.discoMusical.getPrecio());
+        System.out.println(this.disco.getNombre() + ":" + this.disco.getPrecio());
     }
-
 
 }

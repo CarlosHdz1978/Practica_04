@@ -1,7 +1,5 @@
 import Productos.*;
-import src.Mixdown.*;
-import src.Productos.Pelicula;
-import Catalogo.Catalogo;
+import Mixdown.*;
 
 /**
  * Clase principal que ejecuta el catálogo de RockBuster. 

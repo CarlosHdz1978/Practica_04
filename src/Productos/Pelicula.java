@@ -1,4 +1,4 @@
-package src.Productos;
+package Productos;
 
 /**
  * Clase para representar peliculas de RockBuster.

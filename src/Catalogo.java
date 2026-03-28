@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import Productos.Producto; 
+import Productos.*; 
 
 public class Catalogo {
     
@@ -119,7 +119,7 @@ public class Catalogo {
             Producto p = listaProductos.get(indice);
             // Llama al método recursivo o directo de detalles. 
             // Asegúrate de que tu interfaz Producto exija un método para imprimir los detalles
-            p.mostrarDetalles(0); 
+            p.mostrarDetalles(); //p.mostrarDetalles()
         } else {
             System.out.println("Selección inválida. El producto no existe.");
         }
