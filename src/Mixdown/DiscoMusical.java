@@ -33,7 +33,7 @@ public class DiscoMusical{
         return precio; 
     }
 
-    public void imprimirDatos(){
+    public void mostrarInfoDisco(){
         System.out.println("Disco: " + nombre);
         System.out.println("Artista: " + artista);
         System.out.println("Género: " + genero);

@@ -2,34 +2,34 @@ package src.Mixdown;
 
 public class AdaptadorDiscoMusical implements Producto{
 
-    private DiscoMusical discoMusical; 
+    private DiscoMusical disco; 
 
-    public AdaptadorDiscoMusical(DiscoMusical discoMusical){
-        this.discoMusical = discoMusical;
+    public AdaptadorDiscoMusical(DiscoMusical disco){
+        this.disco = disco;
     }
 
     public String getNombre(){
-        this.discoMusical.getNombre();
+        this.disco.getNombre();
     }
 
     public String getGenero(){
-        this.discoMusical.getGenero(); 
+        this.disco.getGenero(); 
     }
 
     public double getPrecio(){
-        this.discoMusical.getPrecio(); 
+        this.disco.getPrecio(); 
     }
 
     public int getDuracion(){
-        this.discoMusical.getDuracion();
+        this.disco.getDuracion();
     }
 
     public void mostrarDetalles(){
-        this.discoMusical.imprimirDatos();
+        this.disco.mostrarInfoDisco();
     }
 
     public void mostrarInfoBasica(){
-        System.out.println(this.discoMusical.getNombre() + ":" + this.discoMusical.getPrecio());
+        System.out.println(this.disco.getNombre() + ":" + this.discoMusical.getPrecio());
     }
 
 

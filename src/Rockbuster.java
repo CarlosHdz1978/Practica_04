@@ -1,9 +1,7 @@
 import Productos.*;
-import src.Mixdown.AdaptadorDiscoMusical;
-import src.Mixdown.DiscoMusical;
+import src.Mixdown.*;
 import src.Productos.Pelicula;
-import Mixdown.*;
-//import Catalogo.Catalogo;
+import Catalogo.Catalogo;
 
 /**
  * Clase principal que ejecuta el catálogo de RockBuster. 
