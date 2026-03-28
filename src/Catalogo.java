@@ -111,15 +111,13 @@ public class Catalogo {
     }
 
     private void mostrarDetallesProducto(int seleccion) {
-        // Restamos 1 porque la lista en pantalla empieza en 1, pero los índices de List empiezan en 0
+            
         int indice = seleccion - 1; 
         
         if (indice >= 0 && indice < listaProductos.size()) {
             System.out.println("\n=== DETALLES DEL PRODUCTO ===");
             Producto p = listaProductos.get(indice);
-            // Llama al método recursivo o directo de detalles. 
-            // Asegúrate de que tu interfaz Producto exija un método para imprimir los detalles
-            p.mostrarDetalles(); //p.mostrarDetalles()
+            p.mostrarDetalles(); 
         } else {
             System.out.println("Selección inválida. El producto no existe.");
         }
