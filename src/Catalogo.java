@@ -3,26 +3,43 @@ import java.util.List;
 import java.util.Scanner;
 import Productos.*; 
 
+/**
+ * Clase que representa el catálogo de productos de RockBuster.
+ * Permite agregar productos, obtener información y navegar mediante un menú interactivo.
+ */
 public class Catalogo {
     
     private List<Producto> listaProductos;
     private Scanner scanner;
 
+    /**
+     * Constructor que inicializa el catálogo con una lista vacía de productos y un scanner para entrada.
+     */
     public Catalogo() {
         listaProductos = new ArrayList<>();
         scanner = new Scanner(System.in);
     }
 
+    /**
+     * Agrega un producto al catálogo.
+     * @param p El producto a agregar a la lista.
+     */
     public void agregarProducto(Producto p) {
         listaProductos.add(p);
     }
 
+    /**
+     * Obtiene la cantidad de productos en el catálogo.
+     * @return El número total de productos en la lista.
+     */
     public int getCantidadProductos() {
         return listaProductos.size();
     }
 
-    // --- MENÚ INTERACTIVO ---
-
+    /**
+     * Muestra el menú interactivo para navegar por el catálogo.
+     * Permite ver el catálogo completo, filtrar por género o costo, y ver detalles de productos.
+     */
     public void mostrarMenu() {
         int opcion = 0;
         do {
@@ -72,6 +89,9 @@ public class Catalogo {
     }
 
 
+    /**
+     * Muestra el catálogo completo con nombre y precio de cada producto.
+     */
     private void verCatalogoCompleto() {
         System.out.println("\n--- CATÁLOGO DE ROCKBUSTER ---");
         // Al mostrar el catálogo sólo se debe mostrar el nombre de los productos y su precio
@@ -156,6 +176,10 @@ public class Catalogo {
         }
     }
 
+    /**
+     * Muestra los detalles completos del producto seleccionado por índice.
+     * @param seleccion El número del producto (1-based) a mostrar.
+     */
     private void mostrarDetallesProducto(int seleccion) {
             
         int indice = seleccion - 1; 
