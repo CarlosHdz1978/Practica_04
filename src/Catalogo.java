@@ -5,7 +5,9 @@ import Productos.*;
 
 /**
  * Clase que representa el catálogo de productos de RockBuster.
- * Permite agregar productos, obtener información y navegar mediante un menú interactivo.
+ * Permite mostrar música y películas, obtener información y navegar mediante un menú interactivo.
+ * 
+ * @author Syntax Error
  */
 public class Catalogo {
     
@@ -22,7 +24,7 @@ public class Catalogo {
 
     /**
      * Agrega un producto al catálogo.
-     * @param p El producto a agregar a la lista.
+     * @param p El producto a agregar a la lista (película, saga o disco con el adaptador)
      */
     public void agregarProducto(Producto p) {
         listaProductos.add(p);
@@ -39,6 +41,14 @@ public class Catalogo {
     /**
      * Muestra el menú interactivo para navegar por el catálogo.
      * Permite ver el catálogo completo, filtrar por género o costo, y ver detalles de productos.
+     * Las opciones incluyen:
+     * <ul>
+     *  <li>1. Ver catálogo completo</li>
+     *  <li>2. Filtrar por género</li>
+     *  <li>3. Filtrar por costo máximo</li>
+     *  <li>4. Salir del programa</li>
+     * </ul>
+     * El menú se repite hasta que el usuario decida salir 
      */
     public void mostrarMenu() {
         int opcion = 0;
@@ -91,6 +101,7 @@ public class Catalogo {
 
     /**
      * Muestra el catálogo completo con nombre y precio de cada producto.
+     * Para cada producto se muestra su número de índice, nombre y precio.
      */
     private void verCatalogoCompleto() {
         System.out.println("\n--- CATÁLOGO DE ROCKBUSTER ---");
@@ -101,6 +112,12 @@ public class Catalogo {
         }
     }
 
+    /**
+     * Muestra todos los géneros disponibles en el catálogo.
+     * Este método recorre todos los productos y extrae los géneros sin repetir,
+     * proporcionando al usuario una referencia de qué géneros puede buscar.
+     * <p>Los géneros se muestran en el orden en que aparecen en el catálogo.
+     */
     private void mostrarGenerosDisponibles() {
         List<String> generosUnicos = new ArrayList<>();
         for (Producto p : listaProductos) {
@@ -117,6 +134,15 @@ public class Catalogo {
         System.out.println();
     }
 
+    /**
+     * Filtra y muestra los productos que coinciden con el género especificado.
+     * Utiliza una búsqueda flexible que considera tanto coincidencias exactas
+     * como parciales.
+     * Muestra una lista de géneros disponibles como sugerencia para el usuario.
+     * Después de mostrar los resultados, permite al usuario seleccionar
+     * un producto para ver sus detalles completos.
+     * @param generoBuscado El género a buscar 
+     */
     private void filtrarPorGenero(String genero) {
         System.out.println("\n--- RESULTADOS PARA GÉNERO: " + genero.toUpperCase() + " ---");
         //boolean encontrado = false;
@@ -161,6 +187,10 @@ public class Catalogo {
         }
     }
 
+    /**
+     * Filtra y muestra los productos cuyo precio es menor o igual al costo máximo especificado.
+     * @param costoMaximo El precio máximo para filtrar los productos
+     */
     private void filtrarPorCostoMaximo(double costoMaximo) {
         System.out.println("\n--- PRODUCTOS HASTA: $" + costoMaximo + " ---");
         boolean encontrado = false;
