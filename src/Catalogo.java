@@ -42,7 +42,7 @@ public class Catalogo {
                         verCatalogoCompleto();
                         break;
                     case 2:
-                        System.out.print("Ingresa el género a buscar (ej. Ciencia Ficción, Rock y pop): ");
+                        System.out.print("Ingresa el género a buscar (ej. Ciencia Ficción, Musical, Aventura/Acción, Drama, Comedia Romántica, Rock y Pop): ");
                         String genero = scanner.nextLine();
                         filtrarPorGenero(genero);
                         break;
@@ -72,7 +72,7 @@ public class Catalogo {
 
     private void verCatalogoCompleto() {
         System.out.println("\n--- CATÁLOGO DE ROCKBUSTER ---");
-        // Al mostrar el catálogo sólo se debe mostrar el nombre de los productos y su precio [cite: 41]
+        // Al mostrar el catálogo sólo se debe mostrar el nombre de los productos y su precio
         for (int i = 0; i < listaProductos.size(); i++) {
             Producto p = listaProductos.get(i);
             System.out.println((i + 1) + ". " + p.getNombre() + " - $" + p.getPrecio());

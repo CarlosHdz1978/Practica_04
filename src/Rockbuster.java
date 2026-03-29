@@ -13,9 +13,9 @@ public class Rockbuster {
      * @param args argumentos de línea de comandos (no utilizados) 
      */
     public static void main(String[] args) {
-        System.out.println("**************************************************");    
-        System.out.println("Bienvenido a la tienda RockBuster");
-        System.out.println("**************************************************");
+        System.out.println("*****************************************************************************");    
+        System.out.println("       Bienvenido a la tienda RockBuster");
+        System.out.println("*****************************************************************************");
 
         Catalogo catalogo = new Catalogo();
 
@@ -119,7 +119,8 @@ public class Rockbuster {
             "El Gran Showman",
             "Michael Gracey",
             "Musical",
-            "P.T. Barnum, tras perder su trabajo de oficina, arriesga todo para inaugurar el Museo Americano en el siglo XIX, que evoluciona hacia un circo con atracciones humanas únicas y extraordinarias.",
+            "P.T. Barnum, tras perder su trabajo de oficina, arriesga todo para inaugurar el Museo Americano en el siglo XIX," +
+            "que evoluciona hacia un circo con atracciones humanas únicas y extraordinarias.",
             68.50,
             105
         );
@@ -128,8 +129,10 @@ public class Rockbuster {
         Pelicula indianaJones1 = new Pelicula(
             "Indiana Jones y los cazadores del arca perdida",
             "Steven Spielberg",
-            "Aventura/ Acción",
-            "Después de una infructuosa misión en Sudamérica, el Gobierno estadounidense encarga al arqueólogo Indiana Jones la búsqueda del Arca de la Alianza, una reliquia bíblica que contiene los diez mandamientos y que convierte en invencible a su portador. Jones deberá enfrentarse a los nazis para adquirir este precioso objeto." , 
+            "Acción",
+            "Después de una infructuosa misión en Sudamérica, el Gobierno estadounidense encarga al arqueólogo Indiana Jones la búsqueda" +
+            "del Arca de la Alianza, una reliquia bíblica que contiene los diez mandamientos y que convierte en invencible a su portador." +
+            "Jones deberá enfrentarse a los nazis para adquirir este precioso objeto." , 
             70.50,
             115
         );
@@ -137,8 +140,10 @@ public class Rockbuster {
         Pelicula indianaJones2 = new Pelicula(
             "Indiana Jones y el templo maldito",
             "Steven Spielberg",
-            "Aventura/ Acción",
-            "En Shanghái, Indiana Jones se mete en un lío con unos gánsters que compiten por una joya. Finalmente consigue escapar del lugar con una bella cantante y su joven acompañante. Los tres escapan en una avioneta que, tras un accidentado vuelo, aterriza en el corazón de la India. Allí intentarán ayudar a los habitantes de un pequeño poblado que ha quedado devastado después del robo de una joya sagrada con poderes." , 
+            "Acción",
+            "En Shanghái, Indiana Jones se mete en un lío con unos gánsters que compiten por una joya. Consigue escapar del lugar con una cantante" +
+            " y su joven acompañante. Los tres escapan en una avioneta que, tras un accidentado vuelo, aterriza en el corazón de la India." +
+            " Allí intentarán ayudar a los habitantes de un pequeño poblado que ha quedado devastado después del robo de una joya sagrada con poderes." , 
             85.00,
             118
         );
@@ -146,8 +151,10 @@ public class Rockbuster {
         Pelicula indianaJones3 = new Pelicula(
             "Indiana Jones y la última cruzada",
             "Steven Spielberg",
-            "Aventura/ Acción",
-            "El intrépido explorador Indiana Jones tiene que rescatar a su padre, un arqueólogo que ha desaparecido mientras buscaba el Santo Grial. Siguiendo las pistas de la libreta de su padre, Indiana llega a Venecia, donde recibe la ayuda de una profesora especialista. Los dos intentarán rescatar a Henry Jones y, de paso, hacerse con la preciada reliquia, que también quieren los nazis." , 
+            "Acción",
+            "El intrépido explorador Indiana Jones tiene que rescatar a su padre, un arqueólogo que ha desaparecido mientras buscaba el Santo Grial." +
+            "Siguiendo las pistas de la libreta de su padre, Indiana llega a Venecia, donde recibe la ayuda de una profesora especialista. " +
+            "Los dos intentarán rescatar a Henry Jones y, de paso, hacerse con la preciada reliquia, que también quieren los nazis." , 
             90.00,
             127
         );
@@ -155,8 +162,9 @@ public class Rockbuster {
         Pelicula indianaJones4 = new Pelicula(
             "Indiana Jones y el reino de la calavera de cristal",
             "Steven Spielberg",
-            "Aventura/ Acción",
-            "Indiana conoce a Mutt, un joven rebelde que le propone un trato: si le ayuda a resolver un problema personal, él, a cambio, le facilitaría uno de los descubrimientos más espectaculares de la historia: la Calavera de Cristal de Akator, que se encuentra en un lugar remoto del Perú." , 
+            "Acción",
+            "Indiana conoce a Mutt, un joven rebelde que le propone un trato: si le ayuda a resolver un problema personal, él, a cambio, le facilitaría" +
+            " uno de los descubrimientos más espectaculares: la Calavera de Cristal de Akator, que se encuentra en un lugar remoto del Perú." , 
             85.00,
             122
         );
@@ -164,8 +172,9 @@ public class Rockbuster {
         Pelicula indianaJones5 = new Pelicula(
             "Indiana Jones y el llamado del destino",
             "James Mangold",
-            "Aventura/ Acción",
-            "En 1969, un Indiana Jones envejecido y derrotado por la vida regresa a la acción para evitar que la hija de uno de sus amigos venda un artilugio que permite viajar en el tiempo a unos nazis que pretenden alterar el curso de la Segunda Guerra Mundial." , 
+            "Acción",
+            "En 1969, un Indiana Jones envejecido y derrotado por la vida regresa a la acción para evitar que la hija de uno de sus amigos "+
+            "venda un artilugio que permite viajar en el tiempo a unos nazis que pretenden alterar el curso de la Segunda Guerra Mundial." , 
             78.00,
             154
         );
@@ -175,17 +184,21 @@ public class Rockbuster {
             "Milagros del Cielo",
             "Patricia Riggen",
             "Drama",
-            "La conmovedora historia de Kevin y Kristy, un matrimonio que descubre que su hija Anna, de diez años, tiene una enfermedad incurable y comienza la búsqueda de una posible cura. En este recorrido, todo se agrava cuando Anna sufre un accidente, pero será el momento en el que comienzan a suceder una serie de milagros que dejarán a la familia y a la comunidad tan desconcertadas como conmovidas.",
+            "La historia de un matrimonio que descubre que su hija Anna, de diez años, tiene una enfermedad incurable y comienza la búsqueda de "+
+            "una posible cura. En este recorrido, todo se agrava cuando Anna sufre un accidente, pero será el momento en el que comienzan a suceder"
+            +" una serie de milagros que dejarán a la familia y a la comunidad tan desconcertadas como conmovidas.",
             80.00,
             109
         );
 
         // Pelicula independiente
         Pelicula hombreAlAgua = new Pelicula(
-            "Hombe al agua",
+            "Hombre al agua",
             "Rob Greenberg",
             "Comedia Romántica", 
-            "Leonardo es un millonario mexicano, egoísta y caprichoso; Kate es una madre soltera contratada para limpiar su yate. Después de despedir injustamente a Kate y negarse a pagarle, Leonardo cae por la borda y se despierta con amnesia. Kate aparece en el hospital y, para vengarse, convence a Leonardo de que él es su esposo.",
+            "Leonardo es un millonario mexicano, egoísta y caprichoso; Kate es una madre soltera contratada para limpiar su yate. "+
+            "Después de despedir injustamente a Kate y negarse a pagarle, Leonardo cae por la borda y se despierta con amnesia. "+
+            "Kate aparece en el hospital y, para vengarse, convence a Leonardo de que él es su esposo.",
             80.50, 
             112
         );
@@ -229,7 +242,7 @@ public class Rockbuster {
         DiscoMusical discoPinkFloyd = new DiscoMusical(
             "The Dark Side of the Moon",
             "Pink Floyd",
-            "Rock Progresivo",
+            "Progresivo",
             1973, 
             390.00
         );
@@ -237,7 +250,7 @@ public class Rockbuster {
         DiscoMusical discoTheBeatles = new DiscoMusical(
             "Abbey Road", 
             "The Beatles", 
-            "Rock y pop", 
+            "Rock", 
             1969, 
             450.00
         );
@@ -245,7 +258,7 @@ public class Rockbuster {
         DiscoMusical discoFrankSinatra = new DiscoMusical(
             "Nothing But the Best", 
             "Frank Sinatra", 
-            "Jazz y pop", 
+            "Jazz", 
             2008, 
             350.00
         );
@@ -253,7 +266,7 @@ public class Rockbuster {
         DiscoMusical discoJoseJose = new DiscoMusical(
             "El triste",
             "José José",
-            "Balada / Pop Latino",
+            "Balada",
             1970, 
             299.67
         );
@@ -269,7 +282,7 @@ public class Rockbuster {
         DiscoMusical discoShakira = new DiscoMusical(
             "Pies Descalzos",
             "Shakira",
-            "Pop / Rock",
+            "Pop",
             1995, 
             360
         );
@@ -307,7 +320,7 @@ public class Rockbuster {
         catalogo.agregarProducto(adaptarJuanGabriel);
         catalogo.agregarProducto(adaptarShakira);
 
-        System.out.println("\n Catálogo creado exitosamente con " + catalogo.getCantidadProductos() + "productos");
+        //System.out.println("\n Catálogo creado exitosamente con " + catalogo.getCantidadProductos() + "productos");
 
         // Mostrar menú
         catalogo.mostrarMenu();

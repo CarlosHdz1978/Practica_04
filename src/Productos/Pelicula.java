@@ -81,7 +81,7 @@ public class Pelicula implements Producto{
         System.out.println(                   nombre                     );
         System.out.println("==========================================");
         System.out.println("Director: " + director);
-        System.out.println("Duracion: " + duracion + "minutos");
+        System.out.println("Duracion: " + duracion + " minutos");
         System.out.println("Genero: " + genero);
         System.out.println("Sinopsis: " + sinopsis);
         System.out.println("Precio: $" + precio);
