@@ -33,7 +33,7 @@ public class AdaptadorDiscoMusical implements Producto{
     }
 
     public void mostrarInfoBasica(){
-        System.out.println(this.disco.getNombre() + ":" + this.disco.getPrecio());
+        System.out.println(this.disco.getNombre() + " - $" + this.disco.getPrecio());
     }
 
 }

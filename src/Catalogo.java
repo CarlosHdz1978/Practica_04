@@ -42,7 +42,9 @@ public class Catalogo {
                         verCatalogoCompleto();
                         break;
                     case 2:
-                        System.out.print("Ingresa el género a buscar (ej. Ciencia Ficción, Musical, Aventura/Acción, Drama, Comedia Romántica, Rock y Pop): ");
+                        // Mostramos géneros disponibles
+                        mostrarGenerosDisponibles();
+                        System.out.print("Ingresa el género a buscar: ");
                         String genero = scanner.nextLine();
                         filtrarPorGenero(genero);
                         break;
@@ -79,19 +81,63 @@ public class Catalogo {
         }
     }
 
-    private void filtrarPorGenero(String genero) {
-        System.out.println("\n--- RESULTADOS PARA GÉNERO: " + genero.toUpperCase() + " ---");
-        boolean encontrado = false;
-        for (int i = 0; i < listaProductos.size(); i++) {
-            Producto p = listaProductos.get(i);
-            // Compara ignorando mayúsculas y minúsculas
-            if (p.getGenero().equalsIgnoreCase(genero)) {
-                System.out.println((i + 1) + ". " + p.getNombre() + " - $" + p.getPrecio());
-                encontrado = true;
+    private void mostrarGenerosDisponibles() {
+        List<String> generosUnicos = new ArrayList<>();
+        for (Producto p : listaProductos) {
+            String genero = p.getGenero();
+            if (!generosUnicos.contains(genero)) {
+                generosUnicos.add(genero);
             }
         }
-        if (!encontrado) {
+        
+        System.out.println("\n Géneros disponibles en el catálogo:");
+        for (String g : generosUnicos) {
+            System.out.println("  - " + g);
+        }
+        System.out.println();
+    }
+
+    private void filtrarPorGenero(String genero) {
+        System.out.println("\n--- RESULTADOS PARA GÉNERO: " + genero.toUpperCase() + " ---");
+        //boolean encontrado = false;
+
+        List<Producto> productosFiltrados = new ArrayList<>();
+        List<Integer> indicesOriginales = new ArrayList<>();
+
+        // Buscar productos con coincidencia parcial
+        for (int i = 0; i < listaProductos.size(); i++) {
+            Producto p = listaProductos.get(i);
+            String generoProducto = p.getGenero();
+
+            // Revisando si hay coincidencia exacta o parcial
+            if (generoProducto.equalsIgnoreCase(genero) || generoProducto.toLowerCase().contains(genero.toLowerCase())){
+                productosFiltrados.add(p);
+                indicesOriginales.add(i+1);
+                //encontrado = true;
+            }
+        }
+        if (productosFiltrados.isEmpty()) {
             System.out.println("No se encontraron productos de ese género.");
+            System.out.println("Sugerencia: Ingresa uno de los géneros mostrados anteriormente.");
+            return;
+        }
+        
+        // Mostramos resultados
+        System.out.println("\n Resultados (" + productosFiltrados.size() + " productos): ");
+        for (int i = 0; i < productosFiltrados.size(); i++) {
+            Producto p = productosFiltrados.get(i);
+            System.out.println(" [" + indicesOriginales.get(i) + "] " + p.getNombre() + " - $" + p.getPrecio());
+        }
+
+        // Preguntamos si el usuario quiere ver detalles
+        System.out.println("\n ¿Desea ver detalles de algún producto? (Ingrese número o 0 para salir)");
+        try {
+            int seleccion = Integer.parseInt(scanner.nextLine());
+            if (seleccion > 0 && seleccion <= listaProductos.size()) {
+                listaProductos.get(seleccion -1).mostrarDetalles();
+            }
+        } catch (NumberFormatException e) {
+            //System.out.println("Entrada inválida");
         }
     }
 
